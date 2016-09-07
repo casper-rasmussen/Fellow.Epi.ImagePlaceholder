@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$id$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+	<projectUrl>https://github.com/casper-rasmussen/Fellow.Epi.ImagePlaceholder</projectUrl>
+    <dependencies>
+    </dependencies>  
+  </metadata>
+</package>
