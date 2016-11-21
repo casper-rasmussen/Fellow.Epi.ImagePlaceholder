@@ -1,4 +1,5 @@
 ﻿using EPiServer;
+using EPiServer.Core.Internal;
 using Fellow.Epi.ImagePlaceholder.Infrastructure.Editor.Content;
 using Fellow.Epi.ImagePlaceholder.Manager.Placeholder;
 using StructureMap.Configuration.DSL;

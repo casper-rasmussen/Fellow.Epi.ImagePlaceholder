@@ -7,8 +7,11 @@ using EPiServer.Cms.Shell;
 using EPiServer.Cms.Shell.UI.Rest.Projects;
 using EPiServer.Configuration;
 using EPiServer.Core;
+using EPiServer.Core.Internal;
 using EPiServer.DataAbstraction;
+using EPiServer.DataAbstraction.Internal;
 using EPiServer.DataAccess;
+using EPiServer.DataAccess.Internal;
 using EPiServer.Framework.Blobs;
 using EPiServer.Security;
 using EPiServer.ServiceLocation;
@@ -29,8 +32,8 @@ namespace Fellow.Epi.ImagePlaceholder.Infrastructure.Editor.Content
 		private readonly ContentMediaResolver _contentMediaResolver;
 		private readonly IContentTypeRepository _contentTypeRepository;
 
-		public PlaceholderImageContentProvider(ContentStore contentStore, ServiceAccessor<IPropertyDefinitionRepository> propertyDefinitionRepository, DefaultContentVersionRepository defaultContentVersionRepository, ServiceAccessor<IPageQuickSearch> pageQuickSearch, ServiceAccessor<ContentAclDB> contentAclDB, IPrincipalAccessor principalAccessor, IBlobFactory blobFactory, IValidationService validationService, IProjectService projectService, ISiteConfigurationRepository siteConfigurationRepository, Settings settings, IImageManager placeholderManager, ContentMediaResolver contentMediaResolver, IContentTypeRepository contentTypeRepository)
-			: base(contentStore, defaultContentVersionRepository, propertyDefinitionRepository, pageQuickSearch, contentAclDB, principalAccessor)
+		public PlaceholderImageContentProvider(DefaultContentProviderDatabase defaultContentProviderDatabase, ServiceAccessor<IPropertyDefinitionRepository> propertyDefinitionRepository, DefaultContentVersionRepository defaultContentVersionRepository, ServiceAccessor<IPageQuickSearch> pageQuickSearch, ServiceAccessor<ContentAclDB> contentAclDB, IPrincipalAccessor principalAccessor, IBlobFactory blobFactory, IValidationService validationService, IProjectService projectService, ISiteConfigurationRepository siteConfigurationRepository, Settings settings, IImageManager placeholderManager, ContentMediaResolver contentMediaResolver, IContentTypeRepository contentTypeRepository)
+			: base(defaultContentProviderDatabase, defaultContentVersionRepository, propertyDefinitionRepository, pageQuickSearch, contentAclDB, principalAccessor)
 		{
 			this._blobFactory = blobFactory;
 			this._validationService = validationService;
